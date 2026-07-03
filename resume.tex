@@ -9,7 +9,7 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[left=0.35in,right=0.35in,top=0.38in,bottom=0.38in]{geometry}
+\usepackage[left=0.35in,right=0.35in,top=0.28in,bottom=0.28in]{geometry}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -124,22 +124,19 @@
             {\textbf{\color{primary}Tekion Corp} \quad {\color{linecolor}\textbullet} \quad \textit{\small\color{secondary}Associate Software Engineer}} 
             {\small\color{primary}Jan 2025 -- Present}
         \resumeItemListStart
-            \resumeItem{\textbf{T1 Platform:} Built the dynamic rendering engine using \textbf{React 18} and \textbf{Webpack Module Federation} to load AI-triggered widgets on-demand from CDN.}
+            \resumeItem{\textbf{GraphQL BFF API Gateway:} Architected a GraphQL BFF orchestrator using \textbf{Node.js}, \textbf{TypeScript}, and \textbf{Apollo Server}, consolidating 15+ downstream microservices server-side to cut page load latency by \textbf{300--400ms}.}
             \begin{itemize}[leftmargin=12pt, label=$\circ$, itemsep=2pt, topsep=1.5pt, parsep=0pt]
-                \resumeItem{Established the platform's widget gallery repository and developed 30+ baseline components, enabling business teams to scale interactive conversational intents.}
+                \resumeItem{Engineered modular schema composition and custom \textbf{OpenTelemetry} distributed tracing; built CI/CD pipelines with automated test suites to validate API gateway contract integrity.}
             \end{itemize}
             
-            \resumeItem{\textbf{GraphQL BFF:} Architected a GraphQL Backend-for-Frontend (BFF) orchestrator using \textbf{Node.js}, \textbf{TypeScript}, and \textbf{Apollo Server}, aggregating 15+ microservice REST APIs server-side to reduce page load latency by 300--400ms.}
+            \resumeItem{\textbf{Edge Infrastructure \& Security:} Designed and implemented a dynamic cryptographic nonce-based CSP system via stream-based HTML injection at the \textbf{Node.js Edge-UI service}.}
             \begin{itemize}[leftmargin=12pt, label=$\circ$, itemsep=2pt, topsep=1.5pt, parsep=0pt]
-                \resumeItem{Built platform infrastructure featuring modular schema composition and custom \textbf{OpenTelemetry} instrumentation; published 2 client-side consumer libraries integrating \textbf{Apollo Client} and \textbf{React Query} to streamline downstream data consumption.}
+                \resumeItem{Secured federated microfrontends and third-party UI dependencies against XSS vulnerabilities by propagating runtime-generated nonces dynamically across build assets.}
             \end{itemize}
             
-            \resumeItem{\textbf{XSS Prevention:} Implemented dynamic nonce-based CSP with stream-based HTML injection at the Node.js Edge-UI service, configuring Webpack \textbf{style-loader} and \textbf{mini-css-extract-plugin} to propagate nonces across federated microfrontends.}
-            \begin{itemize}[leftmargin=12pt, label=$\circ$, itemsep=2pt, topsep=1.5pt, parsep=0pt]
-                \resumeItem{Configured multiple third-party tools (e.g., Pendo) and UI libraries (Ant Design, React-Select, Toastify) to consume cryptographic nonces, achieving 100\% CSP style compliance.}
-            \end{itemize}
+            \resumeItem{\textbf{T1 Platform:} Built the dynamic rendering engine using \textbf{React 18} and \textbf{Webpack Module Federation} to load AI-triggered widgets on-demand from CDN, developing 30+ baseline components.}
             
-            \resumeItem{\textbf{APC Dashboard:} Developed a real-time analytics dashboard for the Automotive Partner Cloud using \textbf{Next.js}, \textbf{Tailwind CSS}, and \textbf{Highcharts} to visualize historical API performance and rate limit metrics.}
+            \resumeItem{\textbf{APC Analytics Dashboard:} Developed a real-time analytics and monitoring dashboard for the Automotive Partner Cloud, processing historical API performance logs and rate-limiting metrics utilizing \textbf{Next.js}.}
         \resumeItemListEnd
 
         \resumeProjectHeading
@@ -153,16 +150,6 @@
           
   \resumeSubHeadingListEnd 
 
-% -------------------- EDUCATION --------------------
-\section{Education}
-  \resumeSubHeadingListStart
-  
-    \resumeSubheading
-      {The LNM Institute of Information Technology}{2021 -- 2025}
-      {Bachelor of Technology (B. Tech) in Computer Science and Engineering -- CGPA: 7.3}{Jaipur, India}
-
-  \resumeSubHeadingListEnd
-
 % -------------------- PROJECTS --------------------
 \section{Projects}
     \resumeSubHeadingListStart
@@ -172,7 +159,7 @@
         {\footnotesize\color{secondary}\textit{Java, Spring Boot, Cloud Gateway, Kafka, Redis, PostgreSQL}}
         \resumeItemListStart
             \resumeItem{Architected a \textbf{Spring Boot microservices architecture} using \textbf{Redpanda/Kafka} event streaming, \textbf{Redis} caching, and \textbf{PostgreSQL} databases, enforcing database-per-service isolation.}
-            \resumeItem{Engineered a centralized entry point via \textbf{Spring Cloud Gateway} and \textbf{Eureka}, implementing stateless edge \textbf{JWT/OAuth2} authentication and propagating validated user identity headers downstream to simplify service authorization.}
+            \resumeItem{Engineered a centralized ingress entry point via \textbf{Spring Cloud Gateway} and \textbf{Eureka}, implementing stateless edge \textbf{JWT/OAuth2} authentication and routing user identity headers downstream.}
             \resumeItem{Built a \textbf{Redis Sorted Set matchmaking engine}, dispatching \textbf{Kafka} events to move matched players to the Game Service.}
             \resumeItem{Managed active game sessions in JVM memory for sub-millisecond validation, utilizing append-only \textbf{Redis Lists} for lazy crash recovery and implementing gateway \textbf{sticky routing} to pin match connections.}
             \resumeItem{Designed \textbf{Kafka-driven rating and history microservices} to process match conclusions asynchronously, offloading heavy PostgreSQL database writes and Glicko-2 calculations from the active WebSocket thread.}
@@ -182,9 +169,9 @@
 % -------------------- ACHIEVEMENTS --------------------
 \section{Achievements}
     \resumeItemListStart
-        \resumeItem{Qualified for and competed in the \textbf{ICPC Kanpur Regional 2024} and \textbf{ICPC Amritapuri Regional 2023}.}
+        \resumeItem{Achieved \textbf{Guardian} rank on LeetCode (Peak Rating: \textbf{2511}), placing in the top \textbf{0.1\%} globally -- \href{https://leetcode.com/Harshit_J12}{\color{accent}Harshit\_J12}.}
         \resumeItem{Achieved \textbf{Candidate Master} status on Codeforces (Peak Rating: \textbf{1933}), placing in the top \textbf{1.5\%} globally -- \href{https://codeforces.com/profile/ItsHarshJ}{\color{accent}ItsHarshJ}.}
-        \resumeItem{Attained \textbf{Guardian} rank on LeetCode (Peak Rating: \textbf{2511}), placing in the top \textbf{0.1\%} globally -- \href{https://leetcode.com/Harshit_J12}{\color{accent}Harshit\_J12}.}
+        \resumeItem{Qualified for and competed in the \textbf{ICPC Kanpur Regional 2024} and \textbf{ICPC Amritapuri Regional 2023}.}
     \resumeItemListEnd
 
 % -------------------- SKILLS --------------------
@@ -193,11 +180,21 @@
 \small
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\linewidth}{@{}l@{\hspace{15pt}}X@{}}
-    \textbf{\color{primary}Languages:} & Java, C++, Python, JavaScript, TypeScript \\
-    \textbf{\color{primary}Frontend:} & React, Next.js, Tailwind CSS, Webpack, Module Federation\\
-    \textbf{\color{primary}Backend \& Messaging:} & Spring Boot, Spring Cloud (Gateway/Eureka), Apache Kafka, WebSockets, RESTful APIs \\
-    \textbf{\color{primary}Databases \& APIs:} & PostgreSQL, MySQL, MongoDB, Redis, GraphQL, Apollo (Client/Server), Hibernate/JPA \\
+    \textbf{\color{primary}Languages:} & Java, C++, Python, TypeScript, JavaScript \\
+    \textbf{\color{primary}Frontend:} & React, Next.js, Tailwind CSS, Webpack (Module Federation) \\
+    \textbf{\color{primary}Backend \& Messaging:} & Spring Boot, Spring Cloud (Gateway/Eureka), Apache Kafka, WebSockets, Node.js, Express, JUnit \\
+    \textbf{\color{primary}Databases \& Tools:} & PostgreSQL, Redis, MySQL, MongoDB, GraphQL, Apollo, Hibernate/JPA, OpenTelemetry, Docker, Git \\
 \end{tabularx}
 \endgroup
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {The LNM Institute of Information Technology}{2021 -- 2025}
+      {Bachelor of Technology (B. Tech) in Computer Science and Engineering -- CGPA: 7.3}{Jaipur, India}
+
+  \resumeSubHeadingListEnd
 
 \end{document}

@@ -6,3 +6,6 @@
 *.synctex.gz
 
 /projects
+
+node_modules
+.venv
