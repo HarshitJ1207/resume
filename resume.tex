@@ -56,11 +56,11 @@
 % -------------------- SECTION FORMATTING --------------------
 \titleformat{\section}{
   \vspace{-5pt}\sffamily\large\bfseries\color{primary}
-}{}{0em}{}[\color{linecolor}\titlerule \vspace{-3pt}]
+}{}{0em}{}[\color{linecolor}\titlerule \vspace{-2pt}]
 
 \titleformat{\subsection}{
   \vspace{-4pt}\sffamily\large\bfseries\color{primary}
-}{\hspace{-.15in}}{0em}{}[\color{linecolor}\vspace{-8pt}]
+}{\hspace{-.15in}}{0em}{}[\color{linecolor}\vspace{-4pt}]
 
 % Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -77,28 +77,28 @@
     \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\color{primary}#1} & \textbf{\color{primary}\small #2} \\
       \textit{\small\color{secondary}#3} & \textit{\small\color{secondary}#4} \\
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
       \textit{\small\color{secondary}#1} & \textit{\small\color{secondary}#2} \\
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-2pt}}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.05in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=10pt, itemsep=2.5pt, parsep=0pt, topsep=2pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=10pt, itemsep=1.8pt, parsep=0pt, topsep=1.5pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \setlength{\footskip}{4.08003pt}
@@ -108,10 +108,10 @@
 
 % -------------------- HEADING--------------------
 \begin{center}
-    {\Huge \bfseries \color{primary} Harshit Jain} \\ \vspace{6pt}
+    {\Huge \bfseries \color{primary} Harshit Jain} \\ \vspace{3pt}
     \footnotesize
     \href{mailto:jain1207harshit@gmail.com}{\color{accent}\faIcon{envelope}\ jain1207harshit@gmail.com} \quad {\color{linecolor}\textbullet} \quad
-    {\color{secondary}\faIcon{phone}\ +91 94068 17091} \quad {\color{linecolor}\textbullet} \quad
+    {\color{accent}\faIcon{phone}}\ {\color{secondary}+91 94068 17091} \quad {\color{linecolor}\textbullet} \quad
     \href{https://www.linkedin.com/in/harshit-jain1207/}{\color{accent}\faIcon{linkedin}\ linkedin.com/in/harshit-jain1207} \quad {\color{linecolor}\textbullet} \quad
     \href{https://github.com/HarshitJ1207}{\color{accent}\faIcon{github}\ github.com/HarshitJ1207}
 \end{center} 
@@ -121,20 +121,14 @@
   \resumeSubHeadingListStart
  
         \resumeProjectHeading
-            {\textbf{\color{primary}Tekion Corp} \quad {\color{linecolor}\textbullet} \quad \textit{\small\color{secondary}Associate Software Engineer}} 
+            {\textbf{\color{primary}Tekion Corp} \quad {\color{linecolor}\textbullet} \quad \textit{\small\color{secondary}Software Engineer}} 
             {\small\color{primary}July 2025 -- Present}
         \resumeItemListStart
-            \resumeItem{\textbf{GraphQL BFF API Gateway:} Architected a GraphQL BFF orchestrator using \textbf{Node.js}, \textbf{TypeScript}, and \textbf{Apollo Server}, consolidating 15+ downstream microservices server-side to cut page load latency by \textbf{300--400ms}.}
-            \begin{itemize}[leftmargin=12pt, label=$\circ$, itemsep=2pt, topsep=1.5pt, parsep=0pt]
-                \resumeItem{Engineered modular schema composition and custom \textbf{OpenTelemetry} distributed tracing; built CI/CD pipelines with automated test suites to validate API gateway contract integrity.}
-            \end{itemize}
-            
-            \resumeItem{\textbf{Edge Infrastructure \& Security:} Designed and implemented a dynamic cryptographic nonce-based CSP system via stream-based HTML injection at the \textbf{Node.js Edge-UI service}.}
-            \begin{itemize}[leftmargin=12pt, label=$\circ$, itemsep=2pt, topsep=1.5pt, parsep=0pt]
-                \resumeItem{Secured federated microfrontends and third-party UI dependencies against XSS vulnerabilities by propagating runtime-generated nonces dynamically across build assets.}
-            \end{itemize}
-            
-            \resumeItem{\textbf{T1 Platform:} Built the dynamic rendering engine using \textbf{React 18} and \textbf{Webpack Module Federation} to load AI-triggered widgets on-demand from CDN, developing 30+ baseline components.}
+            \resumeItem{\textbf{Multi-Region KMS Migration:} Built re-encryption and verification APIs in \textbf{Java} to migrate sensitive \textbf{DynamoDB} config tables to Multi-Region KMS keys (\textbf{MRK}) across clusters; engineered lazy chunked scans and batch writes for zero-downtime cross-region DR.}
+            \resumeItem{\textbf{GraphQL BFF Gateway:} Architected an \textbf{Apollo Server} and \textbf{TypeScript} orchestrator consolidating 15+ microservices, replacing client round trips with internal calls to cut page latency by \textbf{300--400ms}; built modular schemas and \textbf{OpenTelemetry} tracing.}
+            \resumeItem{\textbf{ARC Security Infrastructure:} Engineered a dynamic nonce-based \textbf{Content Security Policy (CSP)} across the \textbf{Automotive Retail Cloud (ARC)}, using stream injection at the \textbf{Node.js} edge-UI to eliminate \textbf{XSS} vulnerabilities across federated \textbf{Webpack} microfrontends and third-party UI dependencies.}
+            \resumeItem{\textbf{Dynamic Widget Runtime (T1):} Architected the core rendering engine to dynamically resolve and stream AI-triggered interactive widgets on-demand from CDN via \textbf{Webpack Module Federation}; enforced runtime fault isolation and modular error handling.}
+            \resumeItem{\textbf{Agentic AI Developer Tooling:} Engineered custom \textbf{Claude Code} agent skills and AST parsers to automate code-verified doc generation, API permission audits across 35+ UI modules, and release gate installation across 24+ repos.}
         \resumeItemListEnd
 
         \resumeProjectHeading
@@ -148,9 +142,8 @@
           {\textbf{\color{primary}Media.net} \quad {\color{linecolor}\textbullet} \quad \textit{\small\color{secondary}Software Development Intern}}
           {\small\color{primary}May 2024 -- July 2024}
         \resumeItemListStart
-            \resumeItem{Developed an end-to-end Click-Through Rate (CTR) prediction pipeline featuring deep categorical modeling with \textbf{SBERT} for ad keyword embeddings and neural networks for 19 distinct features.}
-            \resumeItem{Designed and trained separate \textbf{neural networks} for supply, demand, and user feature interactions, visualizing learned high-dimensional embeddings using \textbf{Altair} and \textbf{Embedding Projector}.}
-            \resumeItem{Integrated multi-layered categorical embeddings into a \textbf{LightGBM} model, reducing log loss from \textbf{0.219} to \textbf{0.181} (3.8\% absolute reduction) for click-through rate prediction.}
+            \resumeItem{Architected an end-to-end \textbf{Click-Through Rate (CTR)} prediction pipeline, engineering \textbf{SBERT} semantic keyword embeddings and multi-tower \textbf{neural networks} to model complex interactions across 19 supply, demand, and user features.}
+            \resumeItem{Integrated learned high-dimensional embeddings into a \textbf{LightGBM} model, reducing log loss from \textbf{0.219} to \textbf{0.181} (3.8\% absolute reduction) for production CTR prediction; visualized learned latent clusters via \textbf{Embedding Projector}.}
         \resumeItemListEnd
           
   \resumeSubHeadingListEnd 
@@ -161,13 +154,13 @@
     
         \resumeProjectHeading
         {\textbf{\color{primary}ChessBlitz -- Real-Time Chess Platform} \quad {\color{linecolor}\textbullet} \quad \href{https://chessblitz.in}{\color{accent}\faIcon{link}\ chessblitz.in} \quad {\color{linecolor}\textbullet} \quad \href{https://github.com/HarshitJ1207/Chess}{\color{accent}\faIcon{github}\ GitHub}}
-        {\footnotesize\color{secondary}\textit{Java, Spring Boot, Cloud Gateway, Kafka, Redis, PostgreSQL}}
+        {\footnotesize\color{secondary}\textit{Java, Spring Boot, Kafka, Redis, PostgreSQL}}
         \resumeItemListStart
             \resumeItem{Architected a \textbf{Spring Boot microservices architecture} using \textbf{Redpanda/Kafka} event streaming, \textbf{Redis} caching, and \textbf{PostgreSQL} databases, enforcing database-per-service isolation.}
             \resumeItem{Engineered a centralized ingress entry point via \textbf{Spring Cloud Gateway} and \textbf{Eureka}, implementing stateless edge \textbf{JWT/OAuth2} authentication and routing user identity headers downstream.}
             \resumeItem{Built a \textbf{Redis Sorted Set matchmaking engine}, dispatching \textbf{Kafka} events to move matched players to the Game Service.}
-            \resumeItem{Managed active game sessions in JVM memory for sub-millisecond validation, utilizing append-only \textbf{Redis Lists} for lazy crash recovery and implementing gateway \textbf{sticky routing} to pin match connections.}
-            \resumeItem{Designed \textbf{Kafka-driven rating and history microservices} to process match conclusions asynchronously, offloading heavy PostgreSQL database writes and Glicko-2 calculations from the active WebSocket thread.}
+            \resumeItem{Managed active game sessions in \textbf{JVM memory} for sub-millisecond validation, utilizing append-only \textbf{Redis Lists} for lazy crash recovery and implementing gateway \textbf{sticky routing} to pin match connections.}
+            \resumeItem{Designed \textbf{Kafka-driven rating and history microservices} to process match conclusions asynchronously, offloading heavy \textbf{PostgreSQL} writes and Glicko-2 calculations from the active \textbf{WebSocket} thread.}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -176,6 +169,7 @@
     \resumeItemListStart
         \resumeItem{Achieved \textbf{Guardian} rank on LeetCode (Peak Rating: \textbf{2511}), placing in the top \textbf{0.1\%} globally -- \href{https://leetcode.com/Harshit_J12}{\color{accent}Harshit\_J12}.}
         \resumeItem{Achieved \textbf{Candidate Master} title on Codeforces (Peak Rating: \textbf{1933}), placing in the top \textbf{1.5\%} globally -- \href{https://codeforces.com/profile/ItsHarshJ}{\color{accent}ItsHarshJ}.}
+        \resumeItem{Co-authored \textbf{Codeforces Round \#840} editorial; authored \textbf{80+} \textbf{Data Structures \& Algorithms (DSA)} problems at \textbf{Coding Ninjas}.}
         \resumeItem{Qualified for and competed in the \textbf{ICPC Kanpur Regional 2024} and \textbf{ICPC Amritapuri Regional 2023}.}
     \resumeItemListEnd
 
@@ -187,8 +181,8 @@
 \begin{tabularx}{\linewidth}{@{}l@{\hspace{15pt}}X@{}}
     \textbf{\color{primary}Languages:} & Java, C++, Python, TypeScript, JavaScript \\
     \textbf{\color{primary}Frontend:} & React, Next.js, Tailwind CSS, Webpack (Module Federation) \\
-    \textbf{\color{primary}Backend \& Messaging:} & Spring Boot, Spring Cloud (Gateway/Eureka), Apache Kafka, WebSockets, Node.js, Express, JUnit \\
-    \textbf{\color{primary}Databases \& Tools:} & PostgreSQL, Redis, MySQL, MongoDB, GraphQL, Apollo, Hibernate/JPA, OpenTelemetry, Docker, Git \\
+    \textbf{\color{primary}Backend \& Messaging:} & Distributed Systems, Concurrency, Spring Boot, Apache Kafka, WebSockets, Node.js, JUnit \\
+    \textbf{\color{primary}Databases \& Tools:} & PostgreSQL, DynamoDB, Redis, MySQL, MongoDB, AWS KMS, GraphQL, Apollo, Docker, CI/CD, Git \\
 \end{tabularx}
 \endgroup
 
